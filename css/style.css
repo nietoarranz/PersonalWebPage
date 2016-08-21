@@ -1,0 +1,397 @@
+/*  STYLE.CSS DE NIETOARRANZ{}*/ 
+/* (derechos)
+/**/
+/* ==========================================================================
+   Content
+   ========================================================================== 
+ *  1. Fonts
+ *  2. Basic
+ *  3. Divs
+ *  4. loading page
+ *  5. Typed Cursor
+ *  6. Hover effects
+ */
+
+
+/*  1. Fonts
+   ========================================================================== *//**/
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
+/*  2. Basic
+   ========================================================================== *//**/
+/*general*/
+body {
+	color: #616161;					/*text color   */
+	font-weight: 400;				/*             */
+	font-size: 1em;					/*text size    */
+	font-family: 'Quicksand';		/*font         */
+	
+}
+/*links*/
+a {
+	color: #616161;					/*link color   */
+	text-decoration: none;			/*             */
+	outline: none;					/*             */
+	font-family: 'Quicksand';		/*font         */
+}		
+
+
+
+/* main */
+.main { 
+background: #f0f0f0;				/*text color   */
+}
+
+.main a { color: #616161; }
+
+/* Content */
+.ip-main {
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 160px 0 10em 0;
+	max-width: 1100px;
+	width: 90%;
+}
+
+.ip-main h2 {
+	margin: 0;
+	padding: 0.5em 0 1em;
+	color: #be4856;
+	text-align: center;
+	font-size: 4.25em;
+	font-size: 4vw;
+	line-height: 1;
+}
+
+.browser {
+	margin: 0 auto;
+	padding-top: 8%;
+	min-height: 400px;
+	max-width: 1000px;
+	width: 100%;
+	border-radius: 8px;
+	background: #fff url(../img/browser.png) no-repeat 50% 0;
+	background-size: 100%;
+	color: #d3d3d3;
+}
+
+.box {
+	float: left;
+	padding: 3.5em;
+	width: 33.3%;
+	font-size: 0.7em;
+	line-height: 1.5;
+}
+
+.box p {
+	font-family: 'Blokk', Arial, sans-serif;
+}
+
+
+/*  3. Divs
+   ========================================================================== *//**/
+.div-contenedor{
+	width:100%;
+	align-content:center;
+	height:auto;
+}
+
+.div-principal{
+	width:80%;
+	height:90%;
+	margin:10%;;
+}
+
+.div-abajo {
+	position:absolute;
+    bottom:10%;
+}
+
+
+.div-titulo{
+	font-family: 'Quicksand';
+	font-size:46px;
+	padding-bottom:2%
+}
+
+.div-subtitulo{
+	font-family: 'Quicksand';
+	font-size:22px;
+}
+
+.div-loading{
+	width:80%;
+	align-content:center;
+	max-width:500px;
+	
+}
+.div-loading img{
+	width:100%;
+	height:auto;
+	max-width:400px;
+}
+
+.div-cabecera{
+	max-width:90%
+}
+
+@media screen and (max-width:400px){
+	.div-titulo{
+		font-size:30px;
+	}
+	.div-subtitulo{
+		font-size:15px;
+	}
+}
+
+	
+
+/*  4. loading page
+   ========================================================================== *//**/
+
+/*basics*/
+.loading-header {
+	position: fixed;		/**/
+	top: 0;					/**/
+	z-index: 100;			/**/
+	min-height: 480px;		/**/
+	width: 100%;			/**/
+	height: 100%;			/**/
+	background: #212121;	/*background color of the loading page*/
+}
+
+.loading-header h1 {
+	margin: 0;				/**/
+}
+
+/*ip-loader*/
+.ip-loader {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	opacity: 0;
+	cursor: default;
+	pointer-events: none;
+}
+.loading-header .ip-loader svg path.ip-loader-circle {
+	-webkit-transition: stroke-dashoffset 0.2s;			/**/
+	transition: stroke-dashoffset 0.2s;					/**/
+	stroke: #f0f0f0;									/*loader color*/
+}
+
+.ip-loader {
+	bottom: 35%;
+}
+
+.loading-header .ip-inner {
+	display: block;
+	margin: 0 auto;
+}
+
+.loading-header .ip-loader svg path {
+	fill: none;
+	stroke-width: 6;
+}
+
+[class^="icon-"]::before, 
+[class*=" icon-"]::before {
+	display: block;
+	margin-bottom: 0.5em;
+	padding: 0.5em;
+	border-radius: 5px;
+	background: #dfdfdf;
+	color: #fff;
+	text-align: center;
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-size: 5em;
+	font-family: 'feather';
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bell:before {
+	content: "\e006";
+}
+
+.icon-cog:before {
+	content: "\e023";
+}
+
+.icon-heart:before {
+	content: "\e024";
+}
+
+/* Animations */
+
+/* Initial animation of header elements */
+.loading .ip-loader {
+	opacity: 1;
+	-webkit-animation: animInitialHeader 1s cubic-bezier(0.7,0,0.3,1) both;
+	animation: animInitialHeader 1s cubic-bezier(0.7,0,0.3,1) both;
+}
+
+.loading .ip-loader {
+	-webkit-animation-delay: 0.2s;
+	animation-delay: 0.2s;
+}
+
+@-webkit-keyframes animInitialHeader {
+	from { opacity: 0; -webkit-transform: translate3d(0,800px,0); }
+}
+
+@keyframes animInitialHeader {
+	from { opacity: 0; -webkit-transform: translate3d(0,800px,0); transform: translate3d(0,800px,0); }
+}
+
+/* Header elements when loading finishes */
+.loaded .ip-loader {
+	opacity: 1;
+}
+
+
+@-webkit-keyframes animLoadedLogo {
+	to { -webkit-transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1); }
+}
+
+@keyframes animLoadedLogo {
+	to { -webkit-transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1); transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1); }
+}
+
+.loaded .ip-loader {
+	-webkit-animation: animLoadedLoader 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
+	animation: animLoadedLoader 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+@-webkit-keyframes animLoadedLoader {
+	to { opacity: 0; -webkit-transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); }
+}
+
+@keyframes animLoadedLoader {
+	to { opacity: 0; -webkit-transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); }
+}
+
+/* Header animation when loading finishes */
+.loaded .loading-header {
+	-webkit-animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
+	animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+@-webkit-keyframes animLoadedHeader {
+	to { -webkit-transform: translate3d(0,-100%,0); }
+}
+
+@keyframes animLoadedHeader {
+	to { -webkit-transform: translate3d(0,-100%,0); transform: translate3d(0,-100%,0); }
+}
+
+
+/* Change layout class for header */
+.layout-switch .loading-header {
+	position: absolute;
+}
+
+/* No JS */
+.no-js .loading-header {
+	position: relative;
+	min-height: 0px;
+}
+
+.no-js .loading-header .ip-logo {
+	margin-top: 20px;
+	height: 180px;
+	opacity: 1;
+	-webkit-transform: none;
+	transform: none;
+}
+
+.no-js .loading-header .ip-logo svg path {
+	fill: #fff;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 45em) {
+
+	.ip-main h2 {
+		font-size: 2.25em;
+		font-size: 10vw;
+	}
+
+	.box {
+		width: 100%%;
+	}
+
+}
+
+/*  5. Typed cursor
+   ========================================================================== *//**/
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@media screen and (max-width: 35em) {
+	.codrops-icon span {
+		display: none;
+	}
+}
+
+/*  6. Hover effects
+   ========================================================================== *//**/
+
+.hover-line {
+  display: inline-block;
+  position: relative;
+  padding: 0 0 5px 0;
+  color: #616161;
+  text-decoration: none;
+  outline: none;
+  font-family: 'Quicksand';
+}
+
+.hover-line:after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  visibility: hidden;
+  background-color: #009688;
+  -webkit-transition: all .1s ease;
+  transition: all 0.3s ease;  
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+.hover-line:hover:after {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
+

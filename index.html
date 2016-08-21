@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+    	<!-- misc -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+        
+        <!-- meta information -->
+        <title>nietoArranz{}</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Enrique Nieto Arranz" />
+        <link rel="shortcut icon" href="img/favicon.ico">
+        
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/menufullpage.css">
+        <link rel="stylesheet" type="text/css" href="css/linkstyles.css" />
+        
+        <!-- javascript -->
+        <script src="js/modernizr.custom.js"></script>
+        
+		<!-- fuentes -->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	</head>
+    	<!-- menuFullPage -->
+        <div class="div-menu">
+        <nav id="menufull" class="panel" role="navigation">
+            <ul>
+                <li><a class="link link--kumya" data-scroll href="#"><span data-letters="paginaPrincipal">paginaPrincipal</span></a></li>
+                <li><a class="link link--kumya" data-scroll href="#"><span data-letters="sobreMi">sobreMi</span></a></li>
+                <li><a class="link link--kumya" data-scroll href="#"><span data-letters="miBlog">miBlog</span></a></li>
+                <li><a class="link link--kumya" data-scroll href="#"><span data-letters="misProyectos">misProyectos</span></a></li>
+            </ul>
+        </nav> 
+        </div>
+        
+        <div class="div-contenedor">
+            <!-- loading screen -->
+            <div class="div-loading">
+                <div id="ip-container" class="ip-container">
+                    <header class="loading-header">
+                        <div class="ip-loader" align="center">
+                            <!-- ↓↓imagen cabecera ↓↓-->
+                            <img src="img/cabecera-blanca.png" width="400" height="200" alt=""/>
+                            <!-- ↑↑imagen cabecera ↑↑ -->
+                            <svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
+                                <path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 														S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+                                <path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+                            </svg>
+                        </div>
+                    </header>
+                </div>
+            </div>    
+            <!-- contenido principal -->
+            <div class="div-principal">
+                <div class="div-abajo">
+                    <div class="div-titulo">
+                        <a class="menu-link hover-line" onMouseOver="azulito.style.color='#009688'; negrito.style.color='#212121'" onMouseOut="azulito.style.color='#616161'; negrito.style.color='#616161'" href="#menufull"><span id="negrito">nietoArranz</span><span id="azulito">{}</span></a>
+                    </div>  
+                    <div class="div-subtitulo"> 
+                        <span class="element0">Soy </span><span class="typed-cursor" style="color:'#212121'">|</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+      	
+      <!-- javascript -->
+      	<!-- importaciones -->
+		<script src="js/classie.js"></script>
+		<script src="js/pathLoader.js"></script>
+		<script src="js/main.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script src="js/menuFullpage.min.js"></script>
+		<script src="js/typed.js" type="text/javascript"></script>
+        <!-- funciones -->
+		
+		<!-- typed text -->
+		<script>
+		$(function(){
+			$("#typed").typed({
+				stringsElement: $('#typed-strings')
+			});
+		});
+		
+		//frase 1
+			setTimeout(function(){
+			$(".element0").typed({
+				strings: ["ingeniero informatico","desarrollador","diseñador web","Quique"],
+				contentType: 'html',
+				typeSpeed: 0.3, // typing speed
+				backDelay: 750, // pause before backspacing
+				loop: false, // loop on or off (true or false)
+				loopCount: false, // number of loops, false = infinite
+				showCursor: true,
+				cursorChar: "|",
+				callback: function(){ } // call function after typing is done
+			});
+		}, 4000);
+		
+		<!-- menufullpage -->
+        </script>
+        <script>
+			smoothScroll.init();
+			$(document).ready(function() {
+					$('.menu-link').menuFullpage();
+			});
+		</script>
+	</body>
+</html>
