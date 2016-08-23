@@ -90,16 +90,34 @@ background: #f0f0f0;				/*text color   */
 
 /*  3. Divs
    ========================================================================== *//**/
-.div-contenedor{
-	width:100%;
-	align-content:center;
-	height:auto;
+html, body{
+	height: 100%;
+	margin: 0px;
 }
 
-.div-principal{
-	width:80%;
-	height:90%;
-	margin:10%;;
+.contenedor{
+	height: 100%;
+	width: auto;
+}
+
+.div-izquierda{
+	height: 100%;
+	width: 50%;
+	float: left;
+
+	background-color: #f0f0f0;
+
+}
+
+.div-derecha{
+	height: 100%;
+	width: 50%;
+	float: right;
+
+	background-color: #009688;
+}
+.div-contenido-izquierda{
+	margin: 10%;
 }
 
 .div-abajo {
