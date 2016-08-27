@@ -29,7 +29,7 @@ body {
 }
 /*links*/
 a {
-	color: #616161;					/*link color   */
+	color: #f0f0f0;					/*link color   */
 	text-decoration: none;			/*             */
 	outline: none;					/*             */
 	font-family: 'Quicksand';		/*font         */
@@ -90,16 +90,40 @@ background: #f0f0f0;				/*text color   */
 
 /*  3. Divs
    ========================================================================== *//**/
-.div-contenedor{
-	width:100%;
-	align-content:center;
-	height:auto;
+html, body{
+	height: 100%;
+	margin: 0px;
 }
 
-.div-principal{
-	width:80%;
-	height:90%;
-	margin:10%;;
+.contenedor{
+	height: 100%;
+	width: auto;
+}
+
+.div-izquierda{
+	height: 100%;
+	width: 50%;
+	float: left;
+
+	background-color: #f0f0f0;
+
+}
+
+.div-derecha{
+	height: 100%;
+	width: 50%;
+	float: right;
+
+	background-color: #009688;
+}
+.div-contenido-izquierda{
+	height: 100%;
+	padding: 10%;
+}
+
+.div-contenido-derecha{
+	height: 100%;
+	font-size: 20px;
 }
 
 .div-abajo {
@@ -107,6 +131,62 @@ background: #f0f0f0;				/*text color   */
     bottom:10%;
 }
 
+#container {
+     display: table;
+     height: 100%;
+     width: 100%;
+     margin: 0;
+   }
+#content {
+     display: table-cell;
+     vertical-align: middle;
+     position: relative;
+     height: 100%;
+}
+
+.brackets:before, .brackets:after {
+	position: absolute;
+	color: transparent;/* It makes the curly brackets invisible at the beginning.*/
+}
+.brackets:hover:before, .brackets:hover:after {
+	color: #f0f0f0; /* Or whatever colour you want. */
+}
+
+/* For movement */
+.brackets:before {
+	content: "{";
+	left: -20px;
+}
+.brackets:hover:before {
+	left: -15px;
+}
+.brackets:after {
+	content: "}";
+	right: -20px;
+}
+.brackets:hover:after {
+	right: -15px;
+}
+a {
+	text-decoration: none;
+	position: relative;
+	transition: all .3s;
+
+}
+a:after, a:before {
+	transition: all .3s;
+}
+
+
+ul {
+    list-style-type: none;
+    text-align:center;
+}
+
+li {
+	list-style-position: inside;
+	padding: 10px;
+}
 
 .div-titulo{
 	font-family: 'Quicksand';
@@ -142,8 +222,40 @@ background: #f0f0f0;				/*text color   */
 	.div-subtitulo{
 		font-size:15px;
 	}
+	.div-contenido-derecha{
+		font-size: 15px;
+	}
 }
+@media screen and (max-width:850px){
+	.div-izquierda{
+		height: 50%;
+		width: 100%;
+		float: none;
+	}
 
+	.div-derecha{
+		height: 50%;
+		width: 100%;
+		float: none;
+	}
+	.contenedor{
+		height: 100%;
+		width: 100%;
+	}
+
+	.div-contenido-izquierda{
+		height: 100%;
+		width: 100%;
+	}
+
+	.div-contenido-derecha{
+		height: 100%;
+		width: 100%;
+		font-size: 20px;
+	}
+
+
+}
 	
 
 /*  4. loading page
