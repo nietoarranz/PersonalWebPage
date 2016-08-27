@@ -65,7 +65,7 @@ li {
 		float: none;
 	}
 	.contenedor{
-		height: auto;
+		height: 100%;
 		width: 100%;
 	}
 
