@@ -117,8 +117,8 @@ html, body{
 	background-color: #009688;
 }
 .div-contenido-izquierda{
-	margin: 10%;
 	height: 100%;
+	padding: 10%;
 }
 
 .div-contenido-derecha{
@@ -239,12 +239,11 @@ li {
 		float: none;
 	}
 	.contenedor{
-		height: auto;
+		height: 100%;
 		width: 100%;
 	}
 
 	.div-contenido-izquierda{
-		margin: 10%;
 		height: 100%;
 		width: 100%;
 	}
