@@ -15,9 +15,8 @@
         
         <!-- css -->
         <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" type="text/css" href="css/menufullpage.css">
-        <link rel="stylesheet" type="text/css" href="css/linkstyles.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" href="css/fakeLoader.css">
 
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
         
@@ -29,35 +28,8 @@
 
 	</head>
     <body style="height:100%">
-    	<!-- menuFullPage -->
-        <div class="div-menu">
-        <nav id="menufull" class="panel" role="navigation">
-            <ul>
-                <li><a class="link link--kumya" data-scroll href="#"><span data-letters="paginaPrincipal">paginaPrincipal</span></a></li>
-                <li><a class="link link--kumya" data-scroll href="#"><span data-letters="sobreMi">sobreMi</span></a></li>
-                <li><a class="link link--kumya" data-scroll href="#"><span data-letters="miBlog">miBlog</span></a></li>
-                <li><a class="link link--kumya" data-scroll href="#"><span data-letters="misProyectos">misProyectos</span></a></li>
-            </ul>
-        </nav> 
-        </div>
-        
-        
-            <!-- loading screen -->
-            <div class="div-loading">
-                <div id="ip-container" class="ip-container">
-                    <header class="loading-header">
-                        <div class="ip-loader" align="center">
-                            <!-- ↓↓imagen cabecera ↓↓-->
-                            <img src="img/cabecera-blanca.png" width="400" height="200" alt=""/>
-                            <!-- ↑↑imagen cabecera ↑↑ -->
-                            <svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
-                                <path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 														S10,57.351,10,40.5S23.649,10,40.5,10z"/>
-                                <path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
-                            </svg>
-                        </div>
-                    </header>
-                </div>
-            </div>    
+    <div id="fakeLoader"></div>
+
             <!-- contenido principal -->
             
             <div class="contenedor">
@@ -67,7 +39,7 @@
                             <div id="content">
                                 <ul style="padding-left: 0px;"">
                                   <li><a href="" class="brackets">home</a></li>
-                                  <li><a href="" class="brackets">miBlog</a></li>
+                                  <li><a href="http://nietoarranz.ga/" class="brackets">miBlog</a></li>
                                   <li><a href="" class="brackets">sobreMi</a></li>
                                   <li><a href="" class="brackets">contacto</a></li>
                                 </ul>
@@ -76,11 +48,15 @@
                     </div>
                 </div>
 
+
                 <div class="div-izquierda">
                     <div class="div-contenido-izquierda">
                         <div class="div-abajo">
                             <div class="div-titulo">
-                                <a class="menu-link hover-line" onMouseOver="azulito.style.color='#009688'; negrito.style.color='#212121'" onMouseOut="azulito.style.color='#616161'; negrito.style.color='#616161'" href="#menufull"><span id="negrito">nietoArranz</span><span id="azulito">{}</span></a>
+                                <!--
+                                <a class="hover-line" onMouseOver="azulito.style.color='#009688'; negrito.style.color='#212121'" onMouseOut="azulito.style.color='#616161'; negrito.style.color='#616161'" href="#menufull"><span id="negrito">nietoArranz</span><span id="azulito">{}</span></a>
+                                -->
+                                <span>nietoArranz</span><span class="logo">{}</span>
                             </div>  
                             <div class="div-subtitulo"> 
                                 <span class="element0">Soy </span><span class="typed-cursor" style="color:'#212121'">|</span>
@@ -95,13 +71,9 @@
             </div>
       <!-- javascript -->
       	<!-- importaciones -->
-		<script src="js/classie.js"></script>
-		<script src="js/pathLoader.js"></script>
-		<script src="js/main.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script src="js/menuFullpage.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="js/typed.js" type="text/javascript"></script>
+        <script src="js/fakeLoader.js"></script>
         <!-- funciones -->
 		
 		<!-- typed text -->
@@ -125,15 +97,27 @@
 				cursorChar: "|",
 				callback: function(){ } // call function after typing is done
 			});
-		}, 4000);
-		
-		<!-- menufullpage -->
+		}, 2000);
         </script>
-        <script>
-			smoothScroll.init();
-			$(document).ready(function() {
-					$('.menu-link').menuFullpage();
-			});
-		</script>
+
+
+        <script type="text/javascript">
+            $("#fakeLoader").fakeLoader();
+        </script>
+
+        <script type="text/javascript">
+
+
+        $("#fakeLoader").fakeLoader({
+
+                timeToHide:1200, //Time in milliseconds for fakeLoader disappear
+                zIndex:999, // Default zIndex
+                spinner:"spinner2",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7' 
+                bgColor:"#263238", //Hex, RGB or RGBA colors
+                imagePath:"img/ball-triangle.svg" //If you want can you insert your custom image
+                
+        });
+         </script>
+
 	</body>
 </html>

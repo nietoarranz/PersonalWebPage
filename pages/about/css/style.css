@@ -22,7 +22,7 @@ html, body{
 	width: 50%;
 	float: right;
 
-	background-color: #009688;
+	background-color: #212121;
 }
 .div-contenido-izquierda{
 	align-content: center;
@@ -52,6 +52,39 @@ li {
 	padding: 10 px;
 }
 
+.div-fila{
+	width: 100%;
+	height: 33%;
+}
+
+
+.div-cuadroizq{
+	height: 100%;
+	width: 50%;
+	float: left;
+	background-color: #009688;
+	align-content: center;
+}
+
+.div-cuadroder{
+	height: 100%;
+	width: 50%;
+	float: right;
+	background-color: #009688;
+	align-content: center;
+}
+
+img{
+	height: 100%;
+	width:auto;
+}
+
+figure{
+	height: 100%;
+	width:auto;
+}
+
+
 @media screen and (max-width:850px){
 	.div-izquierda{
 		height: 50%;
@@ -70,60 +103,4 @@ li {
 	}
 
 
-}
-
-
-
-
-.brackets:before, .brackets:after {
-	position: absolute;
-	color: transparent;/* It makes the curly brackets invisible at the beginning.*/
-}
-.brackets:hover:before, .brackets:hover:after {
-	color: #f0f0f0; /* Or whatever colour you want. */
-}
-
-/* For movement */
-.brackets:before {
-	content: "{";
-	left: -20px;
-}
-.brackets:hover:before {
-	left: -15px;
-}
-.brackets:after {
-	content: "}";
-	right: -20px;
-}
-.brackets:hover:after {
-	right: -15px;
-}
-a {
-	text-decoration: none;
-	position: relative;
-	transition: all .3s;
-
-}
-a:after, a:before {
-	transition: all .3s;
-}
-
-
-a:link {
-    color: #f0f0f0;
-}
-
-/* visited link */
-a:visited {
-    color: #f0f0f0;
-}
-
-/* mouse over link */
-a:hover {
-    color: #f0f0f0;
-}
-
-/* selected link */
-a:active {
-    color: #f0f0f0;
 }
