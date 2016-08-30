@@ -117,7 +117,6 @@ html, body{
 	background-color: #009688;
 }
 .div-contenido-izquierda{
-	height: 100%;
 	padding: 10%;
 }
 
@@ -129,6 +128,9 @@ html, body{
 .div-abajo {
 	position:absolute;
     bottom:10%;
+}
+.logo{
+	color: #009688
 }
 
 #container {
