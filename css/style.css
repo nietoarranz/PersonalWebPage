@@ -1,151 +1,275 @@
-/*  STYLE.CSS DE NIETOARRANZ{}*/ 
-/* (derechos)
-/**/
+/*--------------------------------------------------------------------
+ *CSS:        "style.js"
+ *author:     Enrique Nieto Arranz
+ *website:    http://www.nietoarranz.ga
+-----------------------------------------------------------------------*/
+
 /* ==========================================================================
    Content
    ========================================================================== 
  *  1. Fonts
  *  2. Basic
  *  3. Divs
- *  4. loading page
- *  5. Typed Cursor
- *  6. Hover effects
- */
+ *  4. Elementos
+ *  5. Hover effects
+ *  6. Contenido de terceros
+ */ 
+
+
 
 
 /*  1. Fonts
-   ========================================================================== *//**/
-@import url(https://fonts.googleapis.com/css?family=Quicksand);
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300');
 
-/*  2. Basic
-   ========================================================================== *//**/
-/*general*/
-body {
-	color: #616161;					/*text color   */
-	font-weight: 400;				/*             */
-	font-size: 1em;					/*text size    */
-	font-family: 'Quicksand';		/*font         */
-	
-}
-/*links*/
-a {
-	color: #f0f0f0;					/*link color   */
-	text-decoration: none;			/*             */
-	outline: none;					/*             */
-	font-family: 'Quicksand';		/*font         */
-}		
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400');
+
 
 
 
-/* main */
-.main { 
-background: #f0f0f0;				/*text color   */
+/*  2. Basic
+   ========================================================================== */
+html { 
+	overflow-y:hidden;
+	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none; 
 }
 
-.main a { color: #616161; }
-
-/* Content */
-.ip-main {
-	overflow: hidden;
-	margin: 0 auto;
-	padding: 160px 0 10em 0;
-	max-width: 1100px;
-	width: 90%;
+::-webkit-scrollbar { 
+    display: none; 
 }
 
-.ip-main h2 {
-	margin: 0;
-	padding: 0.5em 0 1em;
-	color: #be4856;
-	text-align: center;
-	font-size: 4.25em;
-	font-size: 4vw;
-	line-height: 1;
+body{
+	font-family: 'Roboto Mono', monospace;
 }
 
-.browser {
-	margin: 0 auto;
-	padding-top: 8%;
-	min-height: 400px;
-	max-width: 1000px;
+.global{
+	font-family: 'Roboto Mono', monospace;
 	width: 100%;
-	border-radius: 8px;
-	background: #fff url(../img/browser.png) no-repeat 50% 0;
-	background-size: 100%;
-	color: #d3d3d3;
-}
-
-.box {
-	float: left;
-	padding: 3.5em;
-	width: 33.3%;
-	font-size: 0.7em;
-	line-height: 1.5;
-}
-
-.box p {
-	font-family: 'Blokk', Arial, sans-serif;
+	font-size: 15px;
 }
 
 
 /*  3. Divs
-   ========================================================================== *//**/
-html, body{
-	height: 100%;
-	margin: 0px;
-}
-
-.contenedor{
-	height: 100%;
-	width: auto;
-}
+   ========================================================================== */
 
 .div-izquierda{
-	height: 100%;
-	width: 50%;
-	float: left;
-
 	background-color: #f0f0f0;
-
+	height: auto;
+	height: 100vh;
+	overflow: hidden;
 }
 
 .div-derecha{
-	height: 100%;
-	width: 50%;
-	float: right;
-
-	background-color: #009688;
-}
-.div-contenido-izquierda{
-	padding: 10%;
+	background-color: #212121;
+	font-family: 'Roboto Mono', monospace;
+	color: #f0f0f0;
+	height: auto;
+	height: 100vh;
 }
 
-.div-contenido-derecha{
-	height: 100%;
-	font-size: 20px;
+.div-scroll{
+	overflow: auto;
 }
 
-.div-abajo {
-	position:absolute;
-    bottom:10%;
-}
-.logo{
-	color: #009688
-}
-
-#container {
-     display: table;
-     height: 100%;
-     width: 100%;
-     margin: 0;
-   }
-#content {
-     display: table-cell;
-     vertical-align: middle;
-     position: relative;
-     height: 100%;
+.div-home{
+	height: 100vh;
+	font-family: 'Roboto Mono', monospace;
+	letter-spacing: 1px;
+	font-weight: 400;
+	
 }
 
+.div-sobremi{
+	height: 100vh;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 400;
+	color: #828282;
+}
+
+.div-contacto{
+	height: 100vh;
+	font-family: 'Roboto Mono', monospace;
+	letter-spacing: 1px;
+	font-weight: 400;
+	font-size: 10px;
+	letter-spacing: 15px;
+}
+
+.div-texto{
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+/*  4. Elementos
+   ========================================================================== */
+
+table{
+	height: 100vh;
+}
+
+.menu{
+	font-size: 17px;
+	font-style: normal;
+	letter-spacing: 2px;
+	font-weight: 300;
+}
+
+.menu ul{
+	padding-left: 0;
+	list-style:none;
+	padding: 10px;
+}
+.menu li{
+	padding: 5px;
+}
+
+.links-sin{
+	text-decoration: none;
+	outline: none;
+	color: #f0f0f0;
+
+}
+.links-sin:hover{
+	text-decoration:none;
+	color: #f0f0f0;
+}
+
+.no_paddings{
+	padding: 0;
+}
+
+.corchete{
+	font-family: 'Quicksand', sans-serif;
+}
+
+ul{
+	padding: 0;
+}
+
+.icon-hover {
+	margin-top: 5px;
+    cursor: pointer;
+	transition: color 300ms ease, margin-top 300ms ease;
+	
+}
+
+.icon-hover:hover{ 
+	position: relative;
+    top: -5px;
+} 
+
+.icon-hover:hover:before, .icon-hover:hover:after {
+	color: #ffe900;
+}
+
+.linkcursor{
+	cursor: pointer;
+	font-weight: 400;
+	color: #212121;
+}
+
+ul{
+	padding: 0;
+}
+
+.icon-hover {
+	margin-top: 5px;
+    cursor: pointer;
+	transition: color 300ms ease, margin-top 300ms ease;
+	
+}
+
+.icon-hover:hover{ 
+	position: relative;
+    top: -5px;
+} 
+
+.icon-hover:hover:before, .icon-hover:hover:after {
+	color: #ffe900;
+}
+
+.linkcursor{
+	cursor: pointer;
+	font-weight: 400;
+	color: #000000;
+}
+
+
+
+
+/*  5. Hover effects
+   ========================================================================== */
+
+/* ===== Hover line ===== */
+.hover-line {
+  display: inline-block;
+  position: relative;
+  padding: 0 0 2px 0;
+  font-weight: 400;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.hover-line:after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  visibility: hidden;
+  background-color: #ffdd00;
+  color: #ffdd00;
+  -webkit-transition: all .1s ease;
+  transition: all 0.3s ease;  
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+.hover-line:hover:after {
+  visibility: visible;
+  color: #212121;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.linea-roja:after{
+	background-color: red;
+}
+
+.linea-azul:after{
+	background-color: #00aced;
+}
+
+.linea-morada:after{
+	background-color: #8a3ab9;
+}
+
+.linea-negra:after{
+	background-color: #212121;
+}
+/* ======================= */
+
+
+/* no-gutters Class Rules */
+.row.no-gutters {
+   margin-right: 0;
+   margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+   padding-right: 0;
+   padding-left: 0;
+}
+/* ======================= */
+
+/* ===== LLaves menu ===== */
 .brackets:before, .brackets:after {
 	position: absolute;
 	color: transparent;/* It makes the curly brackets invisible at the beginning.*/
@@ -179,272 +303,22 @@ a:after, a:before {
 	transition: all .3s;
 }
 
-
-ul {
-    list-style-type: none;
-    text-align:center;
+a:link{
+	text-decoration:none;
 }
 
-li {
-	list-style-position: inside;
-	padding: 10px;
+a:hover{
+	text-decoration:none;
 }
-
-.div-titulo{
-	font-family: 'Quicksand';
-	font-size:46px;
-	padding-bottom:2%
-}
-
-.div-subtitulo{
-	font-family: 'Quicksand';
-	font-size:22px;
-}
-
-.div-loading{
-	width:80%;
-	align-content:center;
-	max-width:500px;
-	
-}
-.div-loading img{
-	width:100%;
-	height:auto;
-	max-width:400px;
-}
-
-.div-cabecera{
-	max-width:90%
-}
-
-@media screen and (max-width:400px){
-	.div-titulo{
-		font-size:30px;
-	}
-	.div-subtitulo{
-		font-size:15px;
-	}
-	.div-contenido-derecha{
-		font-size: 15px;
-	}
-}
-@media screen and (max-width:850px){
-	.div-izquierda{
-		height: 50%;
-		width: 100%;
-		float: none;
-	}
-
-	.div-derecha{
-		height: 50%;
-		width: 100%;
-		float: none;
-	}
-	.contenedor{
-		height: 100%;
-		width: 100%;
-	}
-
-	.div-contenido-izquierda{
-		height: 100%;
-		width: 100%;
-	}
-
-	.div-contenido-derecha{
-		height: 100%;
-		width: 100%;
-		font-size: 20px;
-	}
+/* ======================= */
 
 
-}
-	
-
-/*  4. loading page
-   ========================================================================== *//**/
-
-/*basics*/
-.loading-header {
-	position: fixed;		/**/
-	top: 0;					/**/
-	z-index: 100;			/**/
-	min-height: 480px;		/**/
-	width: 100%;			/**/
-	height: 100%;			/**/
-	background: #212121;	/*background color of the loading page*/
-}
-
-.loading-header h1 {
-	margin: 0;				/**/
-}
-
-/*ip-loader*/
-.ip-loader {
-	position: absolute;
-	left: 0;
-	width: 100%;
-	opacity: 0;
-	cursor: default;
-	pointer-events: none;
-}
-.loading-header .ip-loader svg path.ip-loader-circle {
-	-webkit-transition: stroke-dashoffset 0.2s;			/**/
-	transition: stroke-dashoffset 0.2s;					/**/
-	stroke: #f0f0f0;									/*loader color*/
-}
-
-.ip-loader {
-	bottom: 35%;
-}
-
-.loading-header .ip-inner {
-	display: block;
-	margin: 0 auto;
-}
-
-.loading-header .ip-loader svg path {
-	fill: none;
-	stroke-width: 6;
-}
-
-[class^="icon-"]::before, 
-[class*=" icon-"]::before {
-	display: block;
-	margin-bottom: 0.5em;
-	padding: 0.5em;
-	border-radius: 5px;
-	background: #dfdfdf;
-	color: #fff;
-	text-align: center;
-	text-transform: none;
-	font-weight: normal;
-	font-style: normal;
-	font-variant: normal;
-	font-size: 5em;
-	font-family: 'feather';
-	line-height: 1;
-	speak: none;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.icon-bell:before {
-	content: "\e006";
-}
-
-.icon-cog:before {
-	content: "\e023";
-}
-
-.icon-heart:before {
-	content: "\e024";
-}
-
-/* Animations */
-
-/* Initial animation of header elements */
-.loading .ip-loader {
-	opacity: 1;
-	-webkit-animation: animInitialHeader 1s cubic-bezier(0.7,0,0.3,1) both;
-	animation: animInitialHeader 1s cubic-bezier(0.7,0,0.3,1) both;
-}
-
-.loading .ip-loader {
-	-webkit-animation-delay: 0.2s;
-	animation-delay: 0.2s;
-}
-
-@-webkit-keyframes animInitialHeader {
-	from { opacity: 0; -webkit-transform: translate3d(0,800px,0); }
-}
-
-@keyframes animInitialHeader {
-	from { opacity: 0; -webkit-transform: translate3d(0,800px,0); transform: translate3d(0,800px,0); }
-}
-
-/* Header elements when loading finishes */
-.loaded .ip-loader {
-	opacity: 1;
-}
 
 
-@-webkit-keyframes animLoadedLogo {
-	to { -webkit-transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1); }
-}
+/*  6. Contenido de terceros
+   ========================================================================== */
 
-@keyframes animLoadedLogo {
-	to { -webkit-transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1); transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1); }
-}
-
-.loaded .ip-loader {
-	-webkit-animation: animLoadedLoader 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
-	animation: animLoadedLoader 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
-}
-
-@-webkit-keyframes animLoadedLoader {
-	to { opacity: 0; -webkit-transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); }
-}
-
-@keyframes animLoadedLoader {
-	to { opacity: 0; -webkit-transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); }
-}
-
-/* Header animation when loading finishes */
-.loaded .loading-header {
-	-webkit-animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
-	animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
-}
-
-@-webkit-keyframes animLoadedHeader {
-	to { -webkit-transform: translate3d(0,-100%,0); }
-}
-
-@keyframes animLoadedHeader {
-	to { -webkit-transform: translate3d(0,-100%,0); transform: translate3d(0,-100%,0); }
-}
-
-
-/* Change layout class for header */
-.layout-switch .loading-header {
-	position: absolute;
-}
-
-/* No JS */
-.no-js .loading-header {
-	position: relative;
-	min-height: 0px;
-}
-
-.no-js .loading-header .ip-logo {
-	margin-top: 20px;
-	height: 180px;
-	opacity: 1;
-	-webkit-transform: none;
-	transform: none;
-}
-
-.no-js .loading-header .ip-logo svg path {
-	fill: #fff;
-}
-
-/* Media queries */
-
-@media screen and (max-width: 45em) {
-
-	.ip-main h2 {
-		font-size: 2.25em;
-		font-size: 10vw;
-	}
-
-	.box {
-		width: 100%%;
-	}
-
-}
-
-/*  5. Typed cursor
-   ========================================================================== *//**/
-
+/* ===== typed cursor ===== */
 .typed-cursor{
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
@@ -472,40 +346,5 @@ li {
 		display: none;
 	}
 }
-
-/*  6. Hover effects
-   ========================================================================== *//**/
-
-.hover-line {
-  display: inline-block;
-  position: relative;
-  padding: 0 0 5px 0;
-  color: #616161;
-  text-decoration: none;
-  outline: none;
-  font-family: 'Quicksand';
-}
-
-.hover-line:after {
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  visibility: hidden;
-  background-color: #009688;
-  -webkit-transition: all .1s ease;
-  transition: all 0.3s ease;  
-  -webkit-transform: scaleX(0);
-  -ms-transform: scaleX(0);
-  transform: scaleX(0);
-}
-
-.hover-line:hover:after {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  -ms-transform: scaleX(1);
-  transform: scaleX(1);
-}
+/* ======================= */
 

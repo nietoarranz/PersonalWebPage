@@ -2,3 +2,6 @@ negro - 212121
 blanco - f0f0f0
 azul - 009688
 gris - 616161
+gris osucuro - 263238
+amarillo - f6ff00
+amarillo neuvo - ffe900
